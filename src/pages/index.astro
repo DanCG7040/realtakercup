@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+
+
+<Layout title="Real Takercup">
+    <main class="text-center bg-gray-900 text-white p-6">
+        <!-- Navbar -->
+        <nav class="flex justify-around items-center py-4">
+            <a href="#logros" class="nav-button">Sala de Logros</a>
+            <a href="#historico" class="nav-button">Histórico</a>
+            <!-- Logo in the center -->
+            <img src="/path/to/logo.png" alt="Real Takercup Logo" class="h-16">
+            <a href="#reglas" class="nav-button">Reglas</a>
+            <a href="#participa" class="nav-button">Participa</a>
+        </nav>
+
+        <!-- Main Content -->
+        <section class="animate-blurred-fade-in mt-12">
+            <h1 class="text-4xl font-bold">Real Takercup 2024</h1>
+            <p class="mt-4">Bienvenido a la Real Takercup, el torneo de videojuegos global.</p>
+        </section>
+        
+        <!-- Sección Participa -->
+        <section id="participa" class="mt-12">
+            <h2 class="text-2xl font-bold">Participa</h2>
+            <p>Únete a la competición y demuestra tus habilidades.</p>
+            <a href="/participa" class="nav-button">Regístrate ahora</a>
+        </section>
+
+        <!-- Sección Noticias -->
+        <section id="noticias" class="mt-12 mb-12">
+            <h2 class="text-2xl font-bold">Noticias</h2>
+            <p>Mantente al día con las últimas noticias y actualizaciones del torneo.</p>
+            <a href="/noticias" class="nav-button">Ver Noticias</a>
+        </section>
+
+    </main>
+</Layout>
+
+
+<style>
+    .nav-button {
+        position: relative;
+        font-size: 1.125rem; /* text-lg equivalente en Tailwind */
+        font-weight: 600; /* font-semibold equivalente en Tailwind */
+        padding: 0.5rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-button:hover {
+        color: #00ff7f; /* Cambia el color al pasar el mouse */
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    }
+
+    .nav-button::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #00ff7f;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-button:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+</style>
