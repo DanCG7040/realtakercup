@@ -1,12 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 ---
 
-
-
 <Layout title="Real Takercup">
-    <main class="text-center bg-gray-900 text-white p-6">
+    <main class="text-center bg-dark-green text-white p-6">
+
         <!-- Navbar -->
         <nav class="flex justify-around items-center py-4">
             <a href="#logros" class="nav-button">Sala de Logros</a>
@@ -20,38 +18,117 @@ import Layout from '../layouts/Layout.astro';
         <!-- Main Content -->
         <section class="animate-blurred-fade-in mt-12">
             <h1 class="text-4xl font-bold">Real Takercup 2024</h1>
-            <p class="mt-4">Bienvenido a la Real Takercup, el torneo de videojuegos global.</p>
+            <p class="mt-4">Bienvenido a la Real Takercup, el torneo de videojuegos de los reales.</p>
+        </section>
+        <section id="cronometro" class="mt-12 mb-12 text-center">
+            <h2 class="text-2xl font-bold mb-4">Cuenta Regresiva para el Torneo</h2>
+            <div id="countdown" class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="participa"  class="mt-12 mb-12 text-center">
+            <h2 class="text-2xl font-bold">se Parte del torneo</h2>
+            <p>Explora nuestros juegos infaltables en la copa.</p>
         </section>
         
-        <!-- Sección Participa -->
-        <section id="participa" class="mt-12">
-            <h2 class="text-2xl font-bold">Participa</h2>
-            <p>Únete a la competición y demuestra tus habilidades.</p>
-            <a href="/participa" class="nav-button">Regístrate ahora</a>
+        <section id="juegos" class="mt-12 mb-12 text-center">
+            <h2 class="text-2xl font-bold">Galería de Juegos</h2>
+            <p>Explora nuestros juegos infaltables en la copa.</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://store-images.s-microsoft.com/image/apps.50670.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.d205e025-5444-4eb1-ae46-571ae6895928?q=90&w=480&h=270" alt="Juego 1" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202311/2801/009384c2725d335d3711b0d3c84672142fc93f72077e679e.jpg" alt="Juego 2" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://store-images.s-microsoft.com/image/apps.41327.14292625719089336.ffce4ef8-2c75-4e2b-925b-62db52e6c0d2.224eb7e3-4182-4381-adaa-1ded01955b8a?q=90&w=480&h=270" alt="Juego 3" />
+                </div>
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </section>
+        
+        <section id="presentacion" class="mt-12 mb-12 text-center">
+            <h2 class="text-2xl font-bold">El inicio de nuestro gran proyecto</h2>
+            <p>Mira cómo surgió esta idea y quiénes hicieron parte de ella en el comienzo</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/cKXHqt8dB0U?si=NFUyVC5LRtjIJYlp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
 
-        <!-- Sección Noticias -->
-        <section id="noticias" class="mt-12 mb-12">
-            <h2 class="text-2xl font-bold">Noticias</h2>
-            <p>Mantente al día con las últimas noticias y actualizaciones del torneo.</p>
-            <a href="/noticias" class="nav-button">Ver Noticias</a>
-        </section>
-
+    
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2024 Real Takercup. Todos los derechos reservados.</p>
+        <p>Hecho con <span class="text-red-500">&hearts;</span> por el equipo Real Takercup</p>
+    </footer>
+
+    <!-- JavaScript para el cronómetro -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fecha y hora del torneo (Ajusta esto según la fecha y hora reales)
+            const tournamentDate = new Date("2024-09-01T12:00:00"); // Año-Mes-DíaTHora:Minuto:Segundo
+
+            function updateCountdown() {
+                const now = new Date();
+                const timeDiff = tournamentDate - now;
+
+                if (timeDiff <= 0) {
+                    document.getElementById('countdown').innerHTML = "<p>¡El torneo ha comenzado!</p>";
+                    return;
+                }
+
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            setInterval(updateCountdown, 1000); // Actualiza cada segundo
+        });
+    </script>
 </Layout>
 
-
 <style>
+    body {
+        background-image: url('/src/img/43453549-fondo-verde-oscuro-abstracto-con-hexágonos.jpg');
+
+}
+
     .nav-button {
         position: relative;
         font-size: 1.125rem; /* text-lg equivalente en Tailwind */
         font-weight: 600; /* font-semibold equivalente en Tailwind */
         padding: 0.5rem;
+        color: #ffffff; /* Texto blanco en los botones de navegación */
         transition: color 0.3s ease, transform 0.3s ease;
     }
 
     .nav-button:hover {
-        color: #00ff7f; /* Cambia el color al pasar el mouse */
+        color: #009900; /* Verde oscuro en hover */
         transform: scale(1.1); /* Aumenta ligeramente el tamaño */
     }
 
@@ -62,7 +139,7 @@ import Layout from '../layouts/Layout.astro';
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #00ff7f;
+        background-color: #009900; /* Verde oscuro */
         transform: scaleX(0);
         transform-origin: bottom right;
         transition: transform 0.3s ease;
@@ -71,5 +148,88 @@ import Layout from '../layouts/Layout.astro';
     .nav-button:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+
+    .video-container {
+        position: relative;
+        width: 60%; /* Ajusta el ancho del contenedor */
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        background-color: rgba(0, 153, 0, 0.1); /* Verde oscuro con opacidad para el fondo del video */
+        border: 2px solid rgba(0, 153, 0, 0.5); /* Verde oscuro con opacidad para el borde */
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Usa el 100% del ancho del contenedor */
+        height: 100%; /* Usa el 100% de la altura del contenedor */
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .gallery-item {
+        position: relative;
+        width: 300px; /* Ajusta el tamaño según sea necesario */
+        height: 250px; /* Ajusta el tamaño según sea necesario */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        filter: grayscale(0%);
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.5rem; /* Tamaño de fuente más grande */
+        font-weight: bold;
+    }
+
+    .countdown-item {
+        background: #003300; /* Verde oscuro */
+        color: #ffffff; /* Texto blanco */
+        padding: 1rem 2rem; /* Relleno más grande */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .countdown-value {
+        display: block;
+        font-size: 2rem; /* Tamaño del valor del cronómetro */
+    }
+
+    .countdown-label {
+        display: block;
+        font-size: 1rem; /* Tamaño de la etiqueta */
+    }
+
+    footer {
+        background-color: #000000; /* Negro para el fondo del pie de página */
+        color: #ffffff; /* Texto blanco en el pie de página */
+        padding: 1rem;
+        text-align: center;
     }
 </style>
