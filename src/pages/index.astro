@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Navbar -->
         <nav class="flex justify-around items-center py-4">
             <a href="#logros" class="nav-button">Sala de Logros</a>
-            <a href="#historico" class="nav-button">Histórico</a>
+            <a href="/historico" class="nav-button">Histórico</a>
             <!-- Logo in the center -->
             <img src="/path/to/logo.png" alt="Real Takercup Logo" class="h-16">
             <a href="#reglas" class="nav-button">Reglas</a>
@@ -43,7 +43,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <section id="participa"  class="mt-12 mb-12 text-center">
-            <h2 class="text-2xl font-bold">se Parte del torneo</h2>
+            <h2 class="text-2xl font-bold">Se Parte del torneo</h2>
             <p>Explora nuestros juegos infaltables en la copa.</p>
         </section>
         
@@ -52,10 +52,12 @@ import Layout from '../layouts/Layout.astro';
             <p>Explora nuestros juegos infaltables en la copa.</p>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="https://store-images.s-microsoft.com/image/apps.50670.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.d205e025-5444-4eb1-ae46-571ae6895928?q=90&w=480&h=270" alt="Juego 1" />
+                    <a href="/historico#tabla-historico">
+                        <img src="https://store-images.s-microsoft.com/image/apps.50670.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.d205e025-5444-4eb1-ae46-571ae6895928?q=90&w=480&h=270" alt="Juego 1" />
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202311/2801/009384c2725d335d3711b0d3c84672142fc93f72077e679e.jpg" alt="Juego 2" />
+                    <img src="https://store-images.s-microsoft.com/image/apps.62394.70702278257994163.1152c6f1-f586-40eb-a61e-0f8bad1ee621.3a22a885-cb53-41a8-b9e6-0bc4053a9bac" alt="Juego 2" />
                 </div>
                 <div class="gallery-item">
                     <img src="https://store-images.s-microsoft.com/image/apps.41327.14292625719089336.ffce4ef8-2c75-4e2b-925b-62db52e6c0d2.224eb7e3-4182-4381-adaa-1ded01955b8a?q=90&w=480&h=270" alt="Juego 3" />
@@ -85,7 +87,7 @@ import Layout from '../layouts/Layout.astro';
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Fecha y hora del torneo (Ajusta esto según la fecha y hora reales)
-            const tournamentDate = new Date("2024-09-01T12:00:00"); // Año-Mes-DíaTHora:Minuto:Segundo
+            const tournamentDate = new Date("2024-12-01T12:00:00"); // Año-Mes-DíaTHora:Minuto:Segundo
 
             function updateCountdown() {
                 const now = new Date();

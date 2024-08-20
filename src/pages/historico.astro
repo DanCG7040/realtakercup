@@ -1,0 +1,444 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Real Takercup">
+    <main class="text-center bg-dark-green text-white p-6">
+      
+      <!-- Navbar -->
+      <nav class="flex justify-around items-center py-4">
+        <a href="#logros" class="nav-button">Sala de Logros</a>
+        <a href="/historico" class="nav-button">Histórico</a> <!-- Ruta corregida -->
+        <!-- Logo in the center -->
+        <img src="/index" alt="Real Takercup Logo" class="h-16">
+        <a href="#reglas" class="nav-button">Reglas</a>
+        <a href="#participa" class="nav-button">Participa</a>
+      </nav>
+      
+      <!-- Main Content -->
+      <section class="animate-blurred-fade-in mt-12">
+        <h1 class="text-4xl font-bold">Históricos</h1>
+        <p class="mt-4">Revive el momento con los momentos del torneo y revisa los puntajes.</p>
+    </section>
+    <section class="animate-blurred-fade-in mt-12">
+        <h1 class="text-4xl font-bold">Ganador de la Real TakerCup2022</h1>
+        <p class="mt-4">Revive el momento con los momentos del torneo y revisa los puntajes.</p>
+    </section>
+    <section id="presentacion" class="mt-12 mb-12 text-center">
+        <h2  class="text-4xl font-bold">Final</h2>
+        <p>Revive la final</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/M6Qtp1j5wko?si=IZnj28gND34KSTza" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="animate-blurred-fade-in mt-12">
+        <h1 class="text-4xl font-bold">tabla final</h1>
+        <p class="mt-4">Revive el momento con los momentos del torneo y revisa los puntajes.</p>
+    </section>
+            
+        <table class="table-auto mt-8 w-full border-collapse border border-white">
+            <thead>
+                <tr class="bg-dark-green text-white">
+                    <th class="border border-white px-4 py-2">Nombre</th>
+                    <th class="border border-white px-4 py-2">Puntos</th>  
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-light-green">
+                    <td class="border border-white px-4 py-2">Juan</td>
+                    <td class="border border-white px-4 py-2">58</td>
+                </tr>
+                <tr class="bg-light-green">
+                    <td class="border border-white px-4 py-2">Daniel</td>
+                    <td class="border border-white px-4 py-2">57</td>
+                </tr>
+                <tr class="bg-light-green">
+                    <td class="border border-white px-4 py-2">Sergio</td>
+                    <td class="border border-white px-4 py-2">42</td>
+                </tr>
+                <tr class="bg-light-green">
+                    <td class="border border-white px-4 py-2">Walter</td>
+                    <td class="border border-white px-4 py-2">38</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="animate-blurred-fade-in mt-12">
+            <h1 id="tabla-historico" class="text-4xl font-bold">Puntaje</h1>
+            <p class="mt-4">Revive el momento con los momentos del torneo y revisa los puntajes.</p>
+        </section>
+        
+        <!-- Tabla de Enfrentamientos -->
+        <table     class="table-auto mt-8 w-full border-collapse border border-white">
+          <thead>
+            <tr class="bg-dark-green">
+              <th class="border border-white px-4 py-2">Versus</th>
+              <th class="border border-white px-4 py-2">Tipo de Partida</th>
+              <th class="border border-white px-4 py-2">Juego</th>
+              <th class="border border-white px-4 py-2">Ganador</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="  border border-white px-4 py-2">Juan vs Daniel</td>
+              <td class="border border-white px-4 py-2">PVP</td>
+              <td class="border border-white px-4 py-2">Halo</td>
+              <td class="border border-white px-4 py-2">Juan</td>
+            </tr>
+            <!-- Añade más filas aquí -->
+            <tr>
+                <td class="border border-white px-4 py-2">Walter vs sergio</td>
+                <td class="border border-white px-4 py-2">PVP</td>
+                <td class="border border-white px-4 py-2">Halo</td>
+                <td class="border border-white px-4 py-2">Sergio</td>
+              </tr>
+              <tr>
+                <td class="border border-white px-4 py-2">Juan vs Walter</td>
+                <td class="border border-white px-4 py-2">PVP</td>
+                <td class="border border-white px-4 py-2">Halo</td>
+                <td class="border border-white px-4 py-2">Juan</td>
+              </tr>
+              <tr>
+                <td class="border border-white px-4 py-2">Daniel vs sergio</td>
+                <td class="border border-white px-4 py-2">PVP</td>
+                <td class="border border-white px-4 py-2">Halo</td>
+                <td class="border border-white px-4 py-2">Daniel</td>
+              </tr>
+
+              <tr>
+                <td class="border border-white px-4 py-2">Walter vs Daniel</td>
+                <td class="border border-white px-4 py-2">PVP</td>
+                <td class="border border-white px-4 py-2">Halo</td>
+                <td class="border border-white px-4 py-2">Walter</td>
+              </tr>
+
+              <tr>
+                <td class="border border-white px-4 py-2">Juan vs sergio</td>
+                <td class="border border-white px-4 py-2">PVP</td>
+                <td class="border border-white px-4 py-2">Halo</td>
+                <td class="border border-white px-4 py-2">Juan</td>
+              </tr>
+              <tr>
+                <td class="border border-white px-4 py-2">Juan,Daniel,Walter,sergio</td>
+                <td class="border border-white px-4 py-2">Todos contra todos</td>
+                <td class="border border-white px-4 py-2">Halo</td>
+                <td class="border border-white px-4 py-2">Mas partidas Ganadas Juan </td>
+              </tr>
+              <tr>
+                <td class="border border-white px-4 py-2">Juan,Daniel,Walter,sergio</td>
+                <td class="border border-white px-4 py-2">Todos contra todos</td>
+                <td class="border border-white px-4 py-2">Fortnite</td>
+                <td class="border border-white px-4 py-2"> Mas partidas ganadas Walter</td>
+              </tr>
+              <tr>
+                <td class="border border-white px-4 py-2">Juan,Daniel,Walter,sergio</td>
+                <td class="border border-white px-4 py-2">Todos contra todos</td>
+                <td class="border border-white px-4 py-2">Joy rider</td>
+                <td class="border border-white px-4 py-2">Mas partidas ganadas Daniel</td>
+              </tr>
+              <tr>
+                <td class="border border-white px-4 py-2">Juan,Daniel,Walter,sergio</td>
+                <td class="border border-white px-4 py-2">Todos contra todos</td>
+                <td class="border border-white px-4 py-2">Gang beast</td>
+                <td class="border border-white px-4 py-2"> mas partidas ganadas Daniel</td>
+              </tr>
+
+              <tr>
+                <td class="border border-white px-4 py-2">Juan vs Daniel</td>
+                <td class="border border-white px-4 py-2">PVP</td>
+                <td class="border border-white px-4 py-2">Rocket</td>
+                <td class="border border-white px-4 py-2">Daniel</td>
+              </tr>
+              <!-- Añade más filas aquí -->
+              <tr>
+                  <td class="border border-white px-4 py-2">Walter vs sergio</td>
+                  <td class="border border-white px-4 py-2">PVP</td>
+                  <td class="border border-white px-4 py-2">Rocket</td>
+                  <td class="border border-white px-4 py-2">Walter</td>
+                </tr>
+                <tr>
+                  <td class="border border-white px-4 py-2">Juan vs Walter</td>
+                  <td class="border border-white px-4 py-2">PVP</td>
+                  <td class="border border-white px-4 py-2">Rocket</td>
+                  <td class="border border-white px-4 py-2">Juan</td>
+                </tr>
+                <tr>
+                  <td class="border border-white px-4 py-2">Daniel vs sergio</td>
+                  <td class="border border-white px-4 py-2">PVP</td>
+                  <td class="border border-white px-4 py-2">Rocket</td>
+                  <td class="border border-white px-4 py-2">Daniel</td>
+                </tr>
+  
+                <tr>
+                  <td class="border border-white px-4 py-2">Walter vs Daniel</td>
+                  <td class="border border-white px-4 py-2">PVP</td>
+                  <td class="border border-white px-4 py-2">Rocket</td>
+                  <td class="border border-white px-4 py-2">Daniel</td>
+                </tr>
+  
+                <tr>
+                  <td class="border border-white px-4 py-2">Juan vs sergio</td>
+                  <td class="border border-white px-4 py-2">PVP</td>
+                  <td class="border border-white px-4 py-2">Rocket</td>
+                  <td class="border border-white px-4 py-2">Juan</td>
+                </tr>
+
+
+                <tr>
+                    <td class="border border-white px-4 py-2">Juan vs Daniel</td>
+                    <td class="border border-white px-4 py-2">PVP</td>
+                    <td class="border border-white px-4 py-2">Mortal Kombat</td>
+                    <td class="border border-white px-4 py-2">Daniel</td>
+                  </tr>
+                  <!-- Añade más filas aquí -->
+                  <tr>
+                      <td class="border border-white px-4 py-2">Walter vs sergio</td>
+                      <td class="border border-white px-4 py-2">PVP</td>
+                      <td class="border border-white px-4 py-2">Mortal Kombat</td>
+                      <td class="border border-white px-4 py-2">Sergio</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-white px-4 py-2">Juan vs Walter</td>
+                      <td class="border border-white px-4 py-2">PVP</td>
+                      <td class="border border-white px-4 py-2">Mortal Kombat</td>
+                      <td class="border border-white px-4 py-2">Juan</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-white px-4 py-2">Daniel vs sergio</td>
+                      <td class="border border-white px-4 py-2">PVP</td>
+                      <td class="border border-white px-4 py-2">Mortal Kombat</td>
+                      <td class="border border-white px-4 py-2">Daniel</td>
+                    </tr>
+      
+                    <tr>
+                      <td class="border border-white px-4 py-2">Walter vs Daniel</td>
+                      <td class="border border-white px-4 py-2">PVP</td>
+                      <td class="border border-white px-4 py-2">Mortal Kombat</td>
+                      <td class="border border-white px-4 py-2">Daniel</td>
+                    </tr>
+      
+                    <tr>
+                      <td class="border border-white px-4 py-2">Juan vs sergio</td>
+                      <td class="border border-white px-4 py-2">PVP</td>
+                      <td class="border border-white px-4 py-2">Mortal Kombat</td>
+                      <td class="border border-white px-4 py-2">Juan</td>
+                    </tr>
+
+                    <tr>
+                        <td class="border border-white px-4 py-2">Juan vs Daniel</td>
+                        <td class="border border-white px-4 py-2">PVP</td>
+                        <td class="border border-white px-4 py-2">Multiversus</td>
+                        <td class="border border-white px-4 py-2">Daniel</td>
+                      </tr>
+                      <!-- Añade más filas aquí -->
+                      <tr>
+                          <td class="border border-white px-4 py-2">Walter vs sergio</td>
+                          <td class="border border-white px-4 py-2">PVP</td>
+                          <td class="border border-white px-4 py-2">Multiversus</td>
+                          <td class="border border-white px-4 py-2">Sergio</td>
+                        </tr>
+                        <tr>
+                          <td class="border border-white px-4 py-2">Juan vs Walter</td>
+                          <td class="border border-white px-4 py-2">PVP</td>
+                          <td class="border border-white px-4 py-2">Multiversus</td>
+                          <td class="border border-white px-4 py-2">Juan</td>
+                        </tr>
+                        <tr>
+                          <td class="border border-white px-4 py-2">Daniel vs sergio</td>
+                          <td class="border border-white px-4 py-2">PVP</td>
+                          <td class="border border-white px-4 py-2">Multiversus</td>
+                          <td class="border border-white px-4 py-2">Daniel</td>
+                        </tr>
+          
+                        <tr>
+                          <td class="border border-white px-4 py-2">Walter vs Daniel</td>
+                          <td class="border border-white px-4 py-2">PVP</td>
+                          <td class="border border-white px-4 py-2">Multiversus</td>
+                          <td class="border border-white px-4 py-2">Daniel</td>
+                        </tr>
+          
+                        <tr>
+                          <td class="border border-white px-4 py-2">Juan vs sergio</td>
+                          <td class="border border-white px-4 py-2">PVP</td>
+                          <td class="border border-white px-4 py-2">Multiversus</td>
+                          <td class="border border-white px-4 py-2">Juan</td>
+                        </tr>
+
+                        <tr>
+                            <td class="border border-white px-4 py-2">Juan vs Daniel</td>
+                            <td class="border border-white px-4 py-2">PVP</td>
+                            <td class="border border-white px-4 py-2">Fifa</td>
+                            <td class="border border-white px-4 py-2">Juan</td>
+                          </tr>
+                          <!-- Añade más filas aquí -->
+                          <tr>
+                              <td class="border border-white px-4 py-2">Walter vs sergio</td>
+                              <td class="border border-white px-4 py-2">PVP</td>
+                              <td class="border border-white px-4 py-2">Fifa</td>
+                              <td class="border border-white px-4 py-2">Sergio</td>
+                            </tr>
+                            <tr>
+                              <td class="border border-white px-4 py-2">Juan vs Walter</td>
+                              <td class="border border-white px-4 py-2">PVP</td>
+                              <td class="border border-white px-4 py-2">Fifa</td>
+                              <td class="border border-white px-4 py-2">Walter</td>
+                            </tr>
+                            <tr>
+                              <td class="border border-white px-4 py-2">Daniel vs sergio</td>
+                              <td class="border border-white px-4 py-2">PVP</td>
+                              <td class="border border-white px-4 py-2">Fifa</td>
+                              <td class="border border-white px-4 py-2">Sergio</td>
+                            </tr>
+              
+                            <tr>
+                              <td class="border border-white px-4 py-2">Walter vs Daniel</td>
+                              <td class="border border-white px-4 py-2">PVP</td>
+                              <td class="border border-white px-4 py-2">Fifa</td>
+                              <td class="border border-white px-4 py-2">Daniel</td>
+                            </tr>
+              
+                            <tr>
+                              <td class="border border-white px-4 py-2">Juan vs sergio</td>
+                              <td class="border border-white px-4 py-2">PVP</td>
+                              <td class="border border-white px-4 py-2">Fifa</td>
+                              <td class="border border-white px-4 py-2">Sergio</td>
+                            </tr>
+
+                    
+
+          </tbody>
+        </table>
+
+
+
+    </main>
+  </Layout>
+  
+
+<style>
+    body {
+        background-image: url('/src/img/43453549-fondo-verde-oscuro-abstracto-con-hexágonos.jpg');
+
+}
+
+    .nav-button {
+        position: relative;
+        font-size: 1.125rem; /* text-lg equivalente en Tailwind */
+        font-weight: 600; /* font-semibold equivalente en Tailwind */
+        padding: 0.5rem;
+        color: #ffffff; /* Texto blanco en los botones de navegación */
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-button:hover {
+        color: #009900; /* Verde oscuro en hover */
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    }
+
+    .nav-button::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #009900; /* Verde oscuro */
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-button:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .video-container {
+        position: relative;
+        width: 60%; /* Ajusta el ancho del contenedor */
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        background-color: rgba(0, 153, 0, 0.1); /* Verde oscuro con opacidad para el fondo del video */
+        border: 2px solid rgba(0, 153, 0, 0.5); /* Verde oscuro con opacidad para el borde */
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Usa el 100% del ancho del contenedor */
+        height: 100%; /* Usa el 100% de la altura del contenedor */
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .gallery-item {
+        position: relative;
+        width: 300px; /* Ajusta el tamaño según sea necesario */
+        height: 250px; /* Ajusta el tamaño según sea necesario */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        filter: grayscale(0%);
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.5rem; /* Tamaño de fuente más grande */
+        font-weight: bold;
+    }
+
+    .countdown-item {
+        background: #003300; /* Verde oscuro */
+        color: #ffffff; /* Texto blanco */
+        padding: 1rem 2rem; /* Relleno más grande */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .countdown-value {
+        display: block;
+        font-size: 2rem; /* Tamaño del valor del cronómetro */
+    }
+
+    .countdown-label {
+        display: block;
+        font-size: 1rem; /* Tamaño de la etiqueta */
+    }
+    .bg-light-green  {
+    background-color: #1e8f20; /* Color verde claro */
+}
+.ganador{
+    padding: 4rem;
+}
+
+
+    footer {
+        background-color: #000000; /* Negro para el fondo del pie de página */
+        color: #ffffff; /* Texto blanco en el pie de página */
+        padding: 1rem;
+        text-align: center;
+    }
+</style>
