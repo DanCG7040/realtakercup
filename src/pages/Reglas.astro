@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Real Takercup">
+    <main class="text-center bg-dark-green text-white p-6">
+      
+      <!-- Navbar -->
+      <nav class="flex justify-around items-center py-4 animate-blurred-fade-in mt-12" >
+        <a href="/Logros" class="nav-button">Sala de Logros</a>
+        <a href="/historico" class="nav-button">Histórico</a> <!-- Ruta corregida -->
+        <a href="/">  <img src="/src/img/logopode.png" alt="Real Takercup Logo" class="h-20">   </a>
+        <a href="/reglas" class="nav-button">Reglas</a> <!-- Link a la sección de reglas -->
+        <a href="https://forms.gle/r1YA46dk3WB11b1k7" class="nav-button">Participa</a>
+      </nav>
+
+      <!-- Reglas Section -->
+      <section id="reglas" class="animate-blurred-fade-in mt-12">
+        <h2 class="text-4xl font-bold mb-6">Reglas de la Real TakerCup</h2>
+
+        <div class="border-2 border-green-700 rounded-lg p-6 bg-green-800">
+          <div class="flex flex-wrap justify-between mb-6">
+            <div class="w-full md:w-1/2 pr-4">
+              <h3 class="text-2xl font-bold mb-4">Inscripción y Pago de Cuotas</h3>
+              <p class="mb-4">1.1. Todos los participantes deben pagar la cuota de inscripción establecida para formar parte de la Real TakerCup.</p>
+              <p class="mb-4">1.2. Los pagos deben realizarse antes de la fecha límite de inscripción; cualquier pago posterior no será considerado para la participación.</p>
+              <p class="mb-4">1.3. La cuota de inscripción es no reembolsable una vez realizada.</p>
+            </div>
+
+            <div class="w-full md:w-1/2 pl-4">
+              <h3 class="text-2xl font-bold mb-4">Responsabilidad en las Competencias</h3>
+              <p class="mb-4">2.1. Los participantes son responsables de asistir puntualmente a todas las competencias programadas.</p>
+              <p class="mb-4">2.2. La inasistencia a una competencia no resultará en eliminación automática, pero no se sumarán puntos por dicha competencia.</p>
+              <p class="mb-4">2.3. En caso de inasistencia, el participante debe notificar con antelación a la organización.</p>
+            </div>
+          </div>
+       
+          <div class="flex flex-wrap justify-between mb-6">
+            <div class="w-full md:w-1/2 pr-4">
+              <h3 class="text-2xl font-bold mb-4">Reprogramación de Competencias</h3>
+              <p class="mb-4">3.1. Las fechas de las competencias solo podrán ser reprogramadas si todos los competidores están de acuerdo con la nueva fecha.</p>
+              <p class="mb-4">3.2. Las solicitudes de cambio de fecha deben ser comunicadas con suficiente antelación para su consideración y aprobación.</p>
+            </div>
+
+            <div class="w-full md:w-1/2 pl-4">
+              <h3 class="text-2xl font-bold mb-4">Transmisión de Partidas</h3>
+              <p class="mb-4">4.1. Los competidores deberán crear y vincular sus cuentas de Twitch para transmitir en directo todas las partidas del torneo.</p>
+              <p class="mb-4">4.2. Los jugadores deben transmitir sus rondas durante todo el día de competencia hasta que finalicen las partidas.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap justify-between mb-6">
+            <div class="w-full md:w-1/2 pr-4">
+              <h3 class="text-2xl font-bold mb-4">Uso del Gamepass</h3>
+              <p class="mb-4">5.1. El costo del Gamepass es responsabilidad del participante.</p>
+              <p class="mb-4">5.2. Cada participante debe asegurarse de tener su Gamepass activo y funcional durante la duración de la Real TakerCup.</p>
+            </div>
+
+            <div class="w-full md:w-1/2 pl-4">
+              <h3 class="text-2xl font-bold mb-4">Conducta y Deportividad</h3>
+              <p class="mb-4">6.1. Se espera que todos los participantes mantengan una conducta deportiva y respetuosa durante toda la Real TakerCup.</p>
+              <p class="mb-4">6.2. Cualquier comportamiento inapropiado o violación de las reglas puede resultar en la descalificación sin derecho a reembolso.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap justify-between mb-6">
+            <div class="w-full md:w-1/2 pr-4">
+              <h3 class="text-2xl font-bold mb-4">Días y Categorías de Juego</h3>
+              <p class="mb-4">7.1. La Real TakerCup se jugará en un periodo de 5 días.</p>
+              <p class="mb-4">7.2. Cada participante debe estar preparado para competir en las categorías correspondientes a cada día.</p>
+              <p class="mb-4">7.3. El orden de los días se decidirá girando una ruleta para variar y evitar la monotonía.</p>
+            </div>
+            <div class="w-full md:w-1/2 pl-4">
+              <h3 class="text-2xl font-bold mb-4">Comodines</h3>
+              <p class="mb-4">8.1. Hay 3 comodines que solo se usarán en la primera fase. Cada jugador podrá usar cada comodín una vez.</p>
+              <p class="mb-4">8.2. Una vez terminada la primera etapa, no se podrán usar más comodines.</p>
+              <p class="mb-4">8.3. En la final y en la fase de eliminación, no se podrá usar ningún comodín.</p>
+            </div>
+
+            <div class="w-full md:w-1/2 pl-4">
+              <h3 class="text-2xl font-bold mb-4">Aceptación de Reglas</h3>
+              <p class="mb-4">9.1. Al inscribirse, los participantes aceptan todas las reglas aquí descritas.</p>
+              <p>9.2. La organización se reserva el derecho de modificar estas reglas en cualquier momento, notificando a los participantes de cualquier cambio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+</Layout>
+<style>
+    body {
+        background-image: url('/src/img/43453549-fondo-verde-oscuro-abstracto-con-hexágonos.jpg');
+    }
+
+    .nav-button {
+        position: relative;
+        font-size: 1.125rem; /* text-lg equivalente en Tailwind */
+        font-weight: 600; /* font-semibold equivalente en Tailwind */
+        padding: 0.5rem;
+        color: #ffffff; /* Texto blanco en los botones de navegación */
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-button:hover {
+        color: #009900; /* Verde oscuro en hover */
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    }
+
+    .nav-button::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #009900; /* Verde oscuro */
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-button:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .video-container {
+        position: relative;
+        width: 60%; /* Ajusta el ancho del contenedor */
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        background-color: rgba(0, 153, 0, 0.1); /* Verde oscuro con opacidad para el fondo del video */
+        border: 2px solid rgba(0, 153, 0, 0.5); /* Verde oscuro con opacidad para el borde */
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Usa el 100% del ancho del contenedor */
+        height: 100%; /* Usa el 100% de la altura del contenedor */
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Alinea el contenido al centro */
+        gap: 1rem; /* Espacio entre las imágenes */
+    }
+
+    .gallery img {
+        width: 200px; /* Ajusta el ancho de las imágenes */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        border-radius: 8px; /* Bordes redondeados para las imágenes */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+    }
+</style>

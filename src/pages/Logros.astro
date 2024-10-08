@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Real Takercup">
+    <main class="text-center bg-dark-green text-white p-6">
+
+        <!-- Navbar -->
+        <nav class="flex justify-around items-center py-4 animate-blurred-fade-in mt-12">
+            <a href="/Logros" class="nav-button">Sala de Logros</a>
+            <a href="/historico" class="nav-button">Histórico</a>
+            <a href="/">  <img src="/src/img/logopode.png" alt="Real Takercup Logo" class="h-20">   </a>
+         
+            <a href="/Reglas" class="nav-button">Reglas</a>
+            <a href="https://forms.gle/r1YA46dk3WB11b1k7" class="nav-button">Participa</a>
+        </nav>
+
+        <!-- Main Content -->
+        <section id="logros">
+            <div class="container animate-blurred-fade-in mt-12">
+                <!-- Logro 1 -->
+                <div class="logro">
+                    <h2 class="text-2xl font-bold">El mejor del oeste</h2>
+                    <p>Se obtiene al tener la mayor racha de bajas del dia 1#</p>
+                    <img src="/src/img/Logro1.jfif" alt="logro1">
+                </div>
+        
+                <!-- Logro 2 -->
+                <div class="logro">
+                    <h2 class="text-2xl font-bold">Señor MVP  </h2>
+                    <p>Gana la mayor cantidad de partidas.</p>
+                    <img src= "/src/img/logro2.jfif" alt="Imagen del Logro 2">
+                </div>
+        
+                <!-- Logro 3 -->
+                <div class="logro">
+                    <h2 class="text-2xl font-bold">Estoy loco</h2>
+                    <p>La mejor remontada en una partida.</p>
+                    <img src="/src/img/logro3.jfif" alt="Imagen del Logro 3">
+                </div>
+                 <!-- Logro 3 -->
+                 <div class="logro">
+                    <h2 class="text-2xl font-bold">Goleador real</h2>
+                    <p>El mejor gol.</p>
+                    <img src="/src/img/logro4.jfif" alt="Imagen del Logro 3">
+                </div>
+                 <!-- Logro 3 -->
+                 <div class="logro">
+                    <h2 class="text-2xl font-bold">El mejor de la fase</h2>
+                    <p>Se el numero uno de la tabla de puntos.</p>
+                    <img src="/src/img/logro5.jfif" alt="Imagen del Logro 3">
+                </div>
+                <div class="logro">
+                    <h2 class="text-2xl font-bold"> El Real</h2>
+                    <p>Gana la RealTakerCup.</p>
+                    <img src="/src//img/trofeo.jpeg" alt="Imagen del Logro 3">
+                </div>
+
+                <!-- Agregar más logros según sea necesario -->
+            </div>
+        </section>
+        
+      
+          
+        
+    
+    </main>
+</Layout>
+ 
+    <style>
+        /* Estilos para la sección de logros */
+
+  
+        body {
+    background-image: url('/src/img/43453549-fondo-verde-oscuro-abstracto-con-hexágonos.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: bottom; /* Posiciona la imagen en la parte inferior */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes */
+}
+
+     
+
+
+    .nav-button {
+        position: relative;
+        font-size: 1.125rem; /* text-lg equivalente en Tailwind */
+        font-weight: 600; /* font-semibold equivalente en Tailwind */
+        padding: 0.5rem;
+        color: #ffffff; /* Texto blanco en los botones de navegación */
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-button:hover {
+        color: #009900; /* Verde oscuro en hover */
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    }
+
+    .nav-button::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #009900; /* Verde oscuro */
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-button:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.5rem; /* Tamaño de fuente más grande */
+        font-weight: bold;
+    }
+
+    .countdown-item {
+        background: #003300; /* Verde oscuro */
+        color: #ffffff; /* Texto blanco */
+        padding: 1rem 2rem; /* Relleno más grande */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .countdown-value {
+        display: block;
+        font-size: 2rem; /* Tamaño del valor del cronómetro */
+    }
+        #logros {
+            margin: 2rem 0;
+            text-align: center;
+        }
+    
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+    
+        .logro {
+            flex: 1 1 calc(33% - 2rem);
+            background-color:  #009900;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .logro h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+    
+        .logro p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+    
+        .logro img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+          /* Estilos para la sección de logros */
+          #logros {
+                margin: 2rem 0;
+                text-align: center;
+            }
+        
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+            }
+        
+            .logro {
+                flex: 1 1 calc(33% - 2rem);
+                background-color:  #056605;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+        
+            .logro h2 {
+                font-size: 1.5rem;
+                color: #ffffff;
+                margin-bottom: 0.5rem;
+            }
+        
+            .logro p {
+                font-size: 1rem;
+                color: #ffffff;
+                margin-bottom: 1rem;
+            }
+        
+            .logro img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+     
+    </style>

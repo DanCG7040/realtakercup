@@ -1,18 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 ---
+
 
 <Layout title="Real Takercup">
     <main class="text-center bg-dark-green text-white p-6">
 
         <!-- Navbar -->
-        <nav class="flex justify-around items-center py-4">
-            <a href="#logros" class="nav-button">Sala de Logros</a>
+        <nav class="flex justify-around items-center py-4 animate-blurred-fade-in mt-12">
+            <a href="/Logros" class="nav-button">Sala de Logros</a>
             <a href="/historico" class="nav-button">Histórico</a>
-            <!-- Logo in the center -->
-            <img src="/path/to/logo.png" alt="Real Takercup Logo" class="h-16">
-            <a href="#reglas" class="nav-button">Reglas</a>
-            <a href="#participa" class="nav-button">Participa</a>
+            <a href="/">  
+                <img src="/src/img/logopode.png" alt="Real Takercup Logo" class="h-20">   
+            </a>
+            <a href="/Reglas" class="nav-button">Reglas</a>
+            <a href="https://forms.gle/r1YA46dk3WB11b1k7" class="nav-button">Participa</a>
         </nav>
 
         <!-- Main Content -->
@@ -20,7 +23,8 @@ import Layout from '../layouts/Layout.astro';
             <h1 class="text-4xl font-bold">Real Takercup 2024</h1>
             <p class="mt-4">Bienvenido a la Real Takercup, el torneo de videojuegos de los reales.</p>
         </section>
-        <section id="cronometro" class="mt-12 mb-12 text-center">
+
+        <section id="cronometro" class="mt-12 mb-12 text-center animate-blurred-fade-in ">
             <h2 class="text-2xl font-bold mb-4">Cuenta Regresiva para el Torneo</h2>
             <div id="countdown" class="countdown">
                 <div class="countdown-item">
@@ -42,8 +46,33 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <section id="participa"  class="mt-12 mb-12 text-center">
-            <h2 class="text-2xl font-bold">Se Parte del torneo</h2>
+        <section id="novedades" class="mt-12 mb-12 text-center animate-blurred-fade-in ">
+            <h2 class="text-2xl font-bold">Novedades</h2>
+            <p>Llegan los comodines al torneo!!! 3 comodines especiales para equilibrar las partidas. Solo se pueden usar una vez en la primera fase.</p>
+        
+            <!-- Carrusel de imágenes -->
+            <div class="carousel relative inline-block">
+                <div class="carousel-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7456/7456316.png" alt="Comodín 1" class="carousel-image" />
+                    <h3 class="text-xl font-semibold mt-6">Reinicia la partida</h3>
+                    <p class="text-lg mt-2">Cada jugador podrá reiniciar la partida en cualquier momento.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://static.vecteezy.com/system/resources/previews/007/659/533/non_2x/2x-sign-icon-vector.jpg" alt="Comodín 2" class="carousel-image" />
+                    <h3 class="text-xl font-semibold mt-6">Doble puntos</h3>
+                    <p class="text-lg mt-2">Úsalo con estrategia para ganar puntos extra.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/718/718672.png" alt="Comodín 3" class="carousel-image" />
+                    <h3 class="text-xl font-semibold mt-6">Bloqueo jugador</h3>
+                    <p class="text-lg mt-2">Bloquea a tu oponente para que no consiga puntos.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="participa" class="mt-12 mb-12 text-center">
+            <h2 class="text-2xl font-bold">Sé Parte del Torneo</h2>
             <p>Explora nuestros juegos infaltables en la copa.</p>
         </section>
         
@@ -57,29 +86,50 @@ import Layout from '../layouts/Layout.astro';
                     </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://store-images.s-microsoft.com/image/apps.62394.70702278257994163.1152c6f1-f586-40eb-a61e-0f8bad1ee621.3a22a885-cb53-41a8-b9e6-0bc4053a9bac" alt="Juego 2" />
+                    <a href="/historico#tabla-historico">
+                        <img src="https://store-images.s-microsoft.com/image/apps.62394.70702278257994163.1152c6f1-f586-40eb-a61e-0f8bad1ee621.3a22a885-cb53-41a8-b9e6-0bc4053a9bac" alt="Juego 2" />
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://store-images.s-microsoft.com/image/apps.41327.14292625719089336.ffce4ef8-2c75-4e2b-925b-62db52e6c0d2.224eb7e3-4182-4381-adaa-1ded01955b8a?q=90&w=480&h=270" alt="Juego 3" />
+                    <img src="https://img.asmedia.epimg.net/resizer/v2/PZ44DYVIRJJDNPELUWGZRB3PGM.jpg?auth=399ae69573a88642c909cc2e5dd0453ba849c89f6cd5b53410b7de1bdfb10e5d&width=1472&height=828&smart=true" alt="Juego 3" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://store-images.s-microsoft.com/image/apps.41327.14292625719089336.ffce4ef8-2c75-4e2b-925b-62db52e6c0d2.224eb7e3-4182-4381-adaa-1ded01955b8a?q=90&w=480&h=270" alt="Juego 4" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyz-cnbGpJd79ZPGkXbcciXzOg3td3CS8VdQ&s" alt="Juego 5" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/11/Rocket-League-Symbol.png" alt="Juego 6" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2g5L0gauP5zMtPIzoyPaWEGf6fwVkSss6w&s" alt="Juego 7" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.vexels.com/content/152475/preview/green-circle-question-mark-icon-8640ab.png" alt="Juego 8" />
                 </div>
                 <!-- Agrega más imágenes según sea necesario -->
             </div>
         </section>
         
         <section id="presentacion" class="mt-12 mb-12 text-center">
-            <h2 class="text-2xl font-bold">El inicio de nuestro gran proyecto</h2>
-            <p>Mira cómo surgió esta idea y quiénes hicieron parte de ella en el comienzo</p>
+            <h2 class="text-2xl font-bold">El Inicio de Nuestro Gran Proyecto</h2>
+            <p>Mira cómo surgió esta idea y quiénes hicieron parte de ella en el comienzo.</p>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/cKXHqt8dB0U?si=NFUyVC5LRtjIJYlp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
-    
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6 text-center">
-        <p>&copy; 2024 Real Takercup. Todos los derechos reservados.</p>
+        <h3 class="text-xl font-bold mb-4">Patrocinadores</h3>
+        <div class="sponsors flex justify-center gap-4">
+            <img src='/src/img/MSDC.jpeg' alt="Patrocinador 1" class="sponsor-img">
+            <!-- Agrega más imágenes de patrocinadores según sea necesario -->
+        </div>
+        <p class="mt-4">&copy; 2024 Real Takercup. Todos los derechos reservados.</p>
         <p>Hecho con <span class="text-red-500">&hearts;</span> por el equipo Real Takercup</p>
     </footer>
 
@@ -88,33 +138,99 @@ import Layout from '../layouts/Layout.astro';
         document.addEventListener("DOMContentLoaded", function () {
             // Fecha y hora del torneo (Ajusta esto según la fecha y hora reales)
             const tournamentDate = new Date("2024-12-01T12:00:00"); // Año-Mes-DíaTHora:Minuto:Segundo
-
+    
             function updateCountdown() {
                 const now = new Date();
-                const timeDiff = tournamentDate - now;
-
-                if (timeDiff <= 0) {
-                    document.getElementById('countdown').innerHTML = "<p>¡El torneo ha comenzado!</p>";
-                    return;
+                const distance = tournamentDate - now;
+    
+                // Cálculos para días, horas, minutos y segundos
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Actualizar el contenido del cronómetro
+                document.getElementById("days").innerText = String(days).padStart(2, '0');
+                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    
+                // Si la cuenta regresiva ha terminado
+                if (distance < 0) {
+                    clearInterval(interval);
+                    document.getElementById("countdown").innerHTML = "¡El torneo ha comenzado!";
                 }
-
-                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
             }
-
-            setInterval(updateCountdown, 1000); // Actualiza cada segundo
+    
+            // Actualizar el cronómetro cada segundo
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Llamada inicial para evitar esperar un segundo
+    
+            // Carrusel de imágenes
+            const items = document.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
+    
+            function showNextItem() {
+                // Ocultar el item actual
+                items[currentIndex].style.transform = 'translateX(-100%)'; // Mueve la imagen actual hacia la izquierda
+    
+                // Actualiza el índice y muestra el siguiente item
+                currentIndex = (currentIndex + 1) % items.length; // Incrementa el índice y vuelve al inicio si es necesario
+                items[currentIndex].style.transform = 'translateX(0)'; // Muestra la siguiente imagen
+    
+                // Ocultar los otros items y centrar el actual
+                items.forEach((item, index) => {
+                    if (index !== currentIndex) {
+                        item.style.transform = 'translateX(100%)'; // Mueve las otras imágenes fuera de la vista
+                    }
+                    // Ajustar el display de cada imagen
+                    item.style.display = (index === currentIndex) ? 'block' : 'none';
+                    // Asegurar que cada item esté centrado
+                    item.style.justifyContent = 'center';
+                    item.style.alignItems = 'center';
+                });
+            }
+    
+            // Inicializar mostrando el primer item
+            items.forEach((item, index) => {
+                item.style.transform = (index === currentIndex) ? 'translateX(0)' : 'translateX(100%)';
+                item.style.display = (index === currentIndex) ? 'block' : 'none'; // Mostrar solo el primero
+            });
+    
+            setInterval(showNextItem, 2000); // Cambia cada 3 segundos
         });
     </script>
+    
+    
+    
+    
 </Layout>
 
+
 <style>
+.carousel {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        display: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .carousel-item img {
+        max-width: 100px; /* Ajusta el tamaño de la imagen */
+        margin: 0 auto;
+    }
+
+    .carousel-item.active {
+        display: block;
+    }
+
     body {
         background-image: url('/src/img/43453549-fondo-verde-oscuro-abstracto-con-hexágonos.jpg');
 
@@ -233,5 +349,20 @@ import Layout from '../layouts/Layout.astro';
         color: #ffffff; /* Texto blanco en el pie de página */
         padding: 1rem;
         text-align: center;
+    }
+    .sponsor-img {
+        width: 100px; /* Ajusta el tamaño de las imágenes a 100px de ancho */
+        height: auto;  /* Mantén la proporción de altura */
+        filter: grayscale(100%); /* Convierte la imagen en escala de grises */
+        opacity: 0.7; /* Añade un efecto de opacidad para un gris claro */
+        transition: opacity 0.3s ease; /* Añade una transición suave al efecto */
+    }
+
+    .sponsor-img:hover {
+        opacity: 1; /* Restaura el color original al pasar el mouse por encima */
+    }
+
+    .sponsors {
+        flex-wrap: wrap; /* Permite que las imágenes se ajusten si hay muchas */
     }
 </style>
